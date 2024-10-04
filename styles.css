@@ -8,6 +8,7 @@ div {
     scroll-margin-top: 119px;
     font-size: 28px;
     padding: 20px;
+    max-width: 100%
 }
 
 .s2 {
@@ -53,16 +54,12 @@ li a:hover {
     overflow: hidden;
   }
 
-#ucsd-logo {
-    max-width: 400px;
-}
-
 .grid-container {
     display: grid;
     column-gap: 25px;
     grid-template-columns: auto auto auto auto;
     justify-content: center;
-  }
+}
 
 .grid-item {
     background-color: #182b49;
@@ -91,5 +88,51 @@ li a:hover {
 .item4 {
     grid-column-start: 4;
     grid-column-end: 5;
-  
 }
+
+.logo {
+    max-width: 100%;
+}
+
+#ucsd-logo {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .anchor{
+        display: none;
+    }
+    #ucsd-logo {
+        max-width: 75%;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 20px;
+    }
+
+    .grid-container {
+        display: grid;
+        column-gap: 25px;
+        row-gap: 25px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+
+    .item1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    .item2 {
+        grid-area: 1 / 2 / 2 / 3;     
+    }
+    .item3 {
+        grid-area: 2 / 1 / 3 / 2;
+      
+    }
+    .item4 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+  }
